@@ -47,6 +47,7 @@ public class SplashActivity extends AppCompatActivity {
                 finish();
             }
             else{
+
                android.widget.Toast.makeText(this,"No internet",android.widget.Toast.LENGTH_SHORT).show();
                finish();
                }

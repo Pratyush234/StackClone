@@ -144,6 +144,8 @@ public class QuestionListActivity extends AppCompatActivity
                         mRepository.deleteTask();
                         mQuestions = questionResponse.getItems();
 
+                        if(mTitles.size()>0)
+                            mTitles.clear();
                         for(int i=0;i<mQuestions.size();i++){
                             QuestionsTitle title=new QuestionsTitle(mQuestions.get(i).getTitle());
                             mTitles.add(title);
