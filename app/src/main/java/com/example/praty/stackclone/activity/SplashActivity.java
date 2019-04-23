@@ -41,9 +41,15 @@ public class SplashActivity extends AppCompatActivity {
 
         //navigation to QuestionListActivity otherwise where the latest data is cached offline using persistence
         else{
-            Intent intent=new Intent(this, QuestionListActivity.class);
-            startActivity(intent);
-            finish();
+            if(pref.getBoolean("activity_executed", true)){
+                Intent intent=new Intent(this, QuestionListActivity.class);
+                startActivity(intent);
+                finish();
+            }
+            else{
+               android.widget.Toast.makeText(this,"No internet",android.widget.Toast.LENGTH_SHORT).show();
+               finish();
+               }
         }
     }
 }
