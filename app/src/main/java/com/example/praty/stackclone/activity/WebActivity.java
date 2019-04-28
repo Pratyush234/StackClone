@@ -59,6 +59,7 @@ public class WebActivity extends AppCompatActivity {
                     Intent intent=new Intent(WebActivity.this, UserInterestActivity.class);
                     startActivity(intent);
                     finish();
+
                 }
 
             }
