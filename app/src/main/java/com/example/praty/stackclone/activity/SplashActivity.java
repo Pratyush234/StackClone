@@ -28,7 +28,7 @@ public class SplashActivity extends AppCompatActivity {
 
         //navigation to LoginActivity/UserInterestActivity if there is internet
         if(isConnected) {
-            if (pref.getBoolean("activity_executed", true)) {
+            if (pref.getBoolean("activity_executed", false)) {
                 Intent intent = new Intent(this, UserInterestActivity.class);
                 startActivity(intent);
                 finish();
@@ -41,7 +41,7 @@ public class SplashActivity extends AppCompatActivity {
 
         //navigation to QuestionListActivity otherwise where the latest data is cached offline using persistence
         else{
-            if(pref.getBoolean("activity_executed", true)){
+            if(pref.getBoolean("activity_executed", false)){
                 Intent intent=new Intent(this, QuestionListActivity.class);
                 startActivity(intent);
                 finish();
